@@ -14,7 +14,7 @@ while True:
     priceFloat = int(float(priceString))
 
     #if price is within bounds and the last price that was 
-    #sent wasnt within those bounds send price and reassigning last price
+    #sent wasnt within those bounds send price and reassign last price
 
     if priceFloat in range(22400, 22500):
         if lastPrice in range(22400, 22500):
