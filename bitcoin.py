@@ -97,6 +97,7 @@ while True:
             sendsms(priceString)
             lastPrice = priceFloat
 
-    time.sleep(120000)
+    #waits 120 seconds or 2 minutes until script runs again as to not spam phone
+    time.sleep(120)
 
 

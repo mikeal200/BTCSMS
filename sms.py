@@ -33,11 +33,11 @@ email = os.environ.get('BTCEmail')
 password = os.environ.get('BTCPassword')	
 sms_gateway = os.environ.get('SMSGateway')
 smtp = "smtp.gmail.com"	
-port = 587	
-server = smtplib.SMTP(smtp, port)	
+port = 587		
 
 def sendsms(price):	
 
+    server = smtplib.SMTP(smtp, port)
     server.starttls()	
     server.login(email, password)	
 
