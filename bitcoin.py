@@ -1,4 +1,5 @@
 import cryptocompare
+import time
 from sms import sendsms
 
 priceString = str(cryptocompare.get_price('BTC', curr = 'USD'))
@@ -6,10 +7,6 @@ priceStringAltered = priceString.translate({ord('}'): None})
 priceArray = priceStringAltered.split(": ")
 price = priceArray[2]
 
-<<<<<<< HEAD
-if int(float(price)) <= 25000:
-    sendsms(price)
-=======
 while True:
     priceString = str(cryptocompare.get_price('BTC', curr = 'USD'))
     priceStringAltered = priceString.translate({ord('}'): None})
@@ -102,6 +99,5 @@ while True:
             lastPrice = priceFloat
 
     time.sleep(120000)
->>>>>>> afef740... added enviroment variables
 
 
